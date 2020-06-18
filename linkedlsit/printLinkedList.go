@@ -5,7 +5,7 @@ import (
 )
 
 //打印链表
-func toString(head *SinglyLinkedListNode) string {
+func ToString(head *SinglyLinkedListNode) string {
 	if head == nil {
 		return "the linkedlist is empty."
 	}
