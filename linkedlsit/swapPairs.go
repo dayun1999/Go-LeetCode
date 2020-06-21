@@ -13,11 +13,11 @@ func SwapPairsRecursive(head *SinglyLinkedListNode) *SinglyLinkedListNode {
 	return current
 }
 
-func SwapPairsPrevPointer(head *SinglyLinkedListNode) *SinglyLinkedListNode {
-	prev := &SinglyLinkedListNode{next: head}
-	hint := prev
-	for prev.next != nil && prev.next.next != nil {
-		prev.next.next.next, prev.next.next, prev.next, prev = prev.next, prev.next.next.next, prev.next.next, prev.next
-	}
-	return hint.next
-}
+//func SwapPairsPrevPointer(head *SinglyLinkedListNode) *SinglyLinkedListNode {
+//	prev := &SinglyLinkedListNode{next: head}
+//	hint := prev
+//	for prev.next != nil && prev.next.next != nil {
+//		prev.next.next.next, prev.next.next, prev.next, prev = prev.next, prev.next.next.next, prev.next.next, prev.next
+//	}
+//	return hint.next
+//}
