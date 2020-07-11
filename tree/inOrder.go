@@ -1,12 +1,11 @@
-package traversal
+package tree
 
 import (
 	"fmt"
-	"leetcode/tree"
 )
 
 //inOrder 中序遍历
-func InOrder(root *tree.TreeNode) {
+func InOrder(root *TreeNode) {
 	if root == nil {
 		return
 	}

@@ -1,12 +1,11 @@
-package traversal
+package tree
 
 import (
 	"fmt"
-	"leetcode/tree"
 )
 
 //postOrder 后遍历
-func PostOrder(root *tree.TreeNode) {
+func PostOrder(root *TreeNode) {
 	if root == nil {
 		return
 	}

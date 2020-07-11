@@ -1,11 +1,10 @@
-package traversal
+package tree
 
 import (
 	"fmt"
-	"leetcode/tree"
 )
 
-func PreOrder(root *tree.TreeNode) {
+func PreOrder(root *TreeNode) {
 	if root == nil {
 		return
 	}
