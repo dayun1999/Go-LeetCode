@@ -3,7 +3,7 @@
 // 不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空间解决这一问题。
 // 你可以假设数组中的所有字符都是 ASCII 码表中的可打印字符。
 //made by code4EE
-package recursive
+package recursive_theme
 
 //常规
 func reverseString(s []byte) {

@@ -1,35 +1,38 @@
 package linkedlist
 
-//链表的插入操作
+import "leetcode/definition"
 
+type linkedlist definition.SinglyLinkedList
+
+//链表的插入操作
 //头插法
-func (list *SinglyLinkedList) InsertFirst(items ...int) {
+func (list *linkedlist) InsertFirst(items ...int) {
 	for _, data := range items {
-		node := &SinglyLinkedListNode{
-			data: data,
-			next: nil,
+		node := &definition.SinglyLinkedListNode{
+			Data: data,
+			Next: nil,
 		}
-		if list.head == nil {
-			list.head = node
+		if list.Head == nil {
+			list.Head = node
 		} else {
-			node.next = list.head
+			node.Next = list.Head
 		}
-		list.tail = node
+		list.Tail = node
 	}
 }
 
 //尾插法
-func (list *SinglyLinkedList) InsertLast(items ...int) {
+func (list *linkedlist) InsertLast(items ...int) {
 	for _, data := range items {
-		node := &SinglyLinkedListNode{
-			data: data,
-			next: nil,
+		node := &definition.SinglyLinkedListNode{
+			Data: data,
+			Next: nil,
 		}
-		if list.head == nil {
-			list.head = node
+		if list.Head == nil {
+			list.Head = node
 		} else {
-			list.tail.next = node
+			list.Tail.Next = node
 		}
-		list.tail = node
+		list.Tail = node
 	}
 }

@@ -1,18 +1,19 @@
-package tree
+package tree_theme
 
 import (
 	"fmt"
+	"leetcode/definition"
 )
 
 //层次遍历
-func LevelOrder(root *TreeNode) {
+func LevelOrder(root *definition.TreeNode) {
 	var level = 1
 	for printLevelOrder(root, level) {
 		level++
 	}
 }
 
-func printLevelOrder(root *TreeNode, level int) bool {
+func printLevelOrder(root *definition.TreeNode, level int) bool {
 	if root == nil {
 		return false
 	}

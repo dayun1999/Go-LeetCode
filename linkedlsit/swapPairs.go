@@ -2,22 +2,24 @@
 
 package linkedlist
 
+import "leetcode/definition"
+
 //两两交换-递归
-func SwapPairsRecursive(head *SinglyLinkedListNode) *SinglyLinkedListNode {
-	if head == nil || head.next == nil {
+func SwapPairsRecursive(head *definition.SinglyLinkedListNode) *definition.SinglyLinkedListNode {
+	if head == nil || head.Next == nil {
 		return head
 	}
-	current := head.next
-	head.next = SwapPairsRecursive(current.next)
-	current.next = head
+	current := head.Next
+	head.Next = SwapPairsRecursive(current.Next)
+	current.Next = head
 	return current
 }
 
 //func SwapPairsPrevPointer(head *SinglyLinkedListNode) *SinglyLinkedListNode {
-//	prev := &SinglyLinkedListNode{next: head}
+//	prev := &SinglyLinkedListNode{Next: head}
 //	hint := prev
-//	for prev.next != nil && prev.next.next != nil {
-//		prev.next.next.next, prev.next.next, prev.next, prev = prev.next, prev.next.next.next, prev.next.next, prev.next
+//	for prev.Next != nil && prev.Next.Next != nil {
+//		prev.Next.Next.Next, prev.Next.Next, prev.Next, prev = prev.Next, prev.Next.Next.Next, prev.Next.Next, prev.Next
 //	}
-//	return hint.next
+//	return hint.Next
 //}

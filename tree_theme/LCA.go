@@ -1,8 +1,10 @@
 //LCA- Lowest Common Ancestor 最小共同祖先
-package tree
+package tree_theme
+
+import "leetcode/definition"
 
 //二叉搜索树中为两个结点寻找最小共同祖先
-func LCA(root *TreeNode, target1 int, target2 int) *TreeNode {
+func LCA(root *definition.TreeNode, target1 int, target2 int) *definition.TreeNode {
 	//利用深度优先方法
 	if root == nil {
 		return nil

@@ -1,11 +1,12 @@
-package tree
+package tree_theme
 
 import (
 	"fmt"
+	"leetcode/definition"
 )
 
 //postOrder 后遍历
-func PostOrder(root *TreeNode) {
+func PostOrder(root *definition.TreeNode) {
 	if root == nil {
 		return
 	}

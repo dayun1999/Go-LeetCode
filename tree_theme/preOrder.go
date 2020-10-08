@@ -1,10 +1,11 @@
-package tree
+package tree_theme
 
 import (
 	"fmt"
+	"leetcode/definition"
 )
 
-func PreOrder(root *TreeNode) {
+func PreOrder(root *definition.TreeNode) {
 	if root == nil {
 		return
 	}

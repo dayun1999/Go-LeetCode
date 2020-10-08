@@ -1,4 +1,4 @@
-package recursive
+package recursive_theme
 
 import "testing"
 

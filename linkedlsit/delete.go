@@ -2,32 +2,34 @@
 //made by code4EE
 package linkedlist
 
+import "leetcode/definition"
+
 //链表的删除操作
 //指定位置删除--01 常规操作
-func Delete(head *SinglyLinkedListNode, position int) *SinglyLinkedListNode {
+func Delete(head *definition.SinglyLinkedListNode, position int) *definition.SinglyLinkedListNode {
 	if head == nil {
 		return nil
 	}
 	if position == 0 {
-		return head.next
+		return head.Next
 	}
 	current := head
 	var i int = 1
-	for current.next != nil {
+	for current.Next != nil {
 		if i == position {
-			current.next = current.next.next
+			current.Next = current.Next.Next
 			break
 		}
-		current = current.next
+		current = current.Next
 	}
 	return head
 }
 
 //指定位置删除--02 递归操作
-func DeleteRecursive(head *SinglyLinkedListNode, position int) *SinglyLinkedListNode {
+func DeleteRecursive(head *definition.SinglyLinkedListNode, position int) *definition.SinglyLinkedListNode {
 	if position == 0 {
-		return head.next
+		return head.Next
 	}
-	head.next = DeleteRecursive(head.next, position-1)
+	head.Next = DeleteRecursive(head.Next, position-1)
 	return head
 }

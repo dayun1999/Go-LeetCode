@@ -3,43 +3,45 @@
 
 package linkedlist
 
+import "leetcode/definition"
+
 //递归
-func MergeTwoListsRecursive(l1 *SinglyLinkedListNode, l2 *SinglyLinkedListNode) *SinglyLinkedListNode {
+func MergeTwoListsRecursive(l1 *definition.SinglyLinkedListNode, l2 *definition.SinglyLinkedListNode) *definition.SinglyLinkedListNode {
 	if l1 == nil {
 		return l2
 	}
 	if l2 == nil {
 		return l1
 	}
-	if l1.data < l2.data {
-		l1.next = MergeTwoListsRecursive(l1.next, l2)
+	if l1.Data < l2.Data {
+		l1.Next = MergeTwoListsRecursive(l1.Next, l2)
 		return l1
 	} else {
-		l2.next = MergeTwoListsRecursive(l1, l2.next)
+		l2.Next = MergeTwoListsRecursive(l1, l2.Next)
 		return l2
 	}
 
 }
 
 //迭代
-func MergeTwoLists(l1 *SinglyLinkedListNode, l2 *SinglyLinkedListNode) *SinglyLinkedListNode {
-	newNode := &SinglyLinkedListNode{}
+func MergeTwoLists(l1 *definition.SinglyLinkedListNode, l2 *definition.SinglyLinkedListNode) *definition.SinglyLinkedListNode {
+	newNode := &definition.SinglyLinkedListNode{}
 	prev := newNode
 	for l1 != nil && l2 != nil {
-		if l1.data < l2.data {
-			newNode.next = l1
-			l1 = l1.next
+		if l1.Data < l2.Data {
+			newNode.Next = l1
+			l1 = l1.Next
 		} else {
-			newNode.next = l2
-			l2 = l2.next
+			newNode.Next = l2
+			l2 = l2.Next
 		}
-		newNode = newNode.next
+		newNode = newNode.Next
 	}
 	if l1 != nil {
-		newNode.next = l1
+		newNode.Next = l1
 	}
 	if l2 != nil {
-		newNode.next = l2
+		newNode.Next = l2
 	}
-	return prev.next
+	return prev.Next
 }
