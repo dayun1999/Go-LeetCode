@@ -1,7 +1,7 @@
 package sort
 
 //题349：Intersection of two arrays
-//题目大意：找出两个数组的交集
+//题目大意：找出两个数组的交集(去重)
 
 func findIntersection(nums1, nums2 []int) []int {
 	/*自己的思路：
@@ -18,6 +18,7 @@ func findIntersection(nums1, nums2 []int) []int {
 	}
 	for i := 0; i < len(nums2); i++ {
 		if _, ok := m[nums2[i]]; ok {
+			delete(m, nums2[i]) //删掉，不然会有重复
 			result = append(result, nums2[i])
 		}
 	}
