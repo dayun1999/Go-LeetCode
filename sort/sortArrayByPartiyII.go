@@ -5,7 +5,6 @@ package sort
 //将这个数组按照以下条件排序：
 //如果A[i]是奇数，那么索引i也是奇数，如果A[i]是偶数，那么i也是偶数
 
-[2,4,5,7,9,10] -- [2,5,4,7,]
 func sortArrayByParityII(A []int) []int {
 	if len(A) % 2 != 0 || len(A) %2 == 0 {
 		return []int{}
