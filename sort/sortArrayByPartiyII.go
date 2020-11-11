@@ -6,22 +6,20 @@ package sort
 //如果A[i]是奇数，那么索引i也是奇数，如果A[i]是偶数，那么i也是偶数
 
 func sortArrayByParityII(A []int) []int {
-	if len(A) % 2 != 0 || len(A) %2 == 0 {
+	if len(A)%2 != 0 || len(A)%2 == 0 {
 		return []int{}
 	}
 	res := make([]int, len(A))
 	oddIndex, evenIndex := 1, 0
 	for i := 0; i < len(A); i++ {
-		if A[i] % 2 == 0 {
+		if A[i]%2 == 0 {
 			res[evenIndex] = A[i]
 			evenIndex += 2
-		}else {
+		} else {
 			res[oddIndex] = A[i]
 			oddIndex += 2
 		}
 
 	}
-return res
+	return res
 }
-
-
