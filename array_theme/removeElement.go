@@ -13,4 +13,9 @@ func removeElement(nums []int, val int) int {
 		}
 	}
 	return begin
+	// nums = [1,2,1,3] val=1
+	// step 1: nums[0]=1 == val=1  now i=0 nums=[1,2,1,3] begin=0
+	// step 2: nums[1]=2 != val=1  now i=1 nums=[2,2,1,3] begin=1
+	// step 3: nums[2]=1 == val=1  now i=2 nums=[2,2,1,3] begin=1
+	// step 4: nums[3]=3 != val=1  now i=3 nums=[2,3,1,3] begin=2
 }
